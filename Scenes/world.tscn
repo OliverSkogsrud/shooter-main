@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://crj60x4lao40r"]
+[gd_scene load_steps=19 format=3 uid="uid://crj60x4lao40r"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_iaofp"]
 [ext_resource type="PackedScene" uid="uid://cfwig4lfftnqn" path="res://Scenes/player.tscn" id="1_kn8p0"]
@@ -75,8 +75,6 @@ albedo_texture = ExtResource("8_mr78y")
 material = SubResource("StandardMaterial3D_5vbgv")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0v1ar"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_haqf2"]
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_iaofp")
@@ -546,6 +544,3 @@ shape = SubResource("BoxShape3D_0v1ar")
 
 [node name="Portal" parent="." instance=ExtResource("10_htbsn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.52078, 2.99155, 92.4398)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_haqf2")
