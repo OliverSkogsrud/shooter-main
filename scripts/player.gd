@@ -84,13 +84,18 @@ func _physics_process(delta):
 	
 	#slide_speed = slide_speed * 2
 	
+	if Input.is_action_just_pressed("E"):
+		Engine.time_scale = 0.6
+	
+	if Input.is_action_just_released("E"):
+		Engine.time_scale = 1
+	
 	
 	if Input.is_action_just_pressed("slide") and SPEED > 3:
 		can_slide = true
 		slide()
 		
 	if Input.is_action_just_released("slide"):
-		Engine.time_scale = 1
 		slide_sound.stop()
 		slide_speed = 0
 		state = RUN
@@ -238,8 +243,6 @@ func slide():
 	
 	slide_sound.play()
 	
-	Engine.time_scale = 0.7
-	
 	var look_dir = -neck.transform.basis.z
 	if can_slide:
 		SPEED = 0
@@ -260,7 +263,6 @@ func slide():
 	while sliding == true:
 		
 		if slide_speed <= 0:
-			Engine.time_scale = 1
 			slide_sound.stop()
 			sliding = false
 			can_slide = true
