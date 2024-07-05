@@ -18,8 +18,8 @@ func _process(delta):
 	position += transform.basis * Vector3(0, 0, -speed) * delta
 	if $RayCast3D.is_colliding():
 		var collider = $RayCast3D.get_collider()
-		if collider.get_parent().get_node(collider.get_path()).has_method("damage"):
-			get_parent().get_node(collider.get_path()).damage(damage)
+		if collider.get_parent().get_node(collider.get_path()).has_method("enemy_damage"):
+			get_parent().get_node(collider.get_path()).enemy_damage(damage)
 		else:
 			particles.emitting = true
 			await get_tree().create_timer(1.0).timeout

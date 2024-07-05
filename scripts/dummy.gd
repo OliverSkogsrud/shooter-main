@@ -3,8 +3,8 @@ extends CharacterBody3D
 var health = 20
 
 @onready var ray = $RayCast3D
-@onready var barrel = $EnemyGun/Barrel
-@onready var shootParticles = $EnemyGun/GPUParticles3D
+@onready var barrel = $enemy_for_shooter/Armature/Skeleton3D/BoneAttachment3D/EnemyGun
+@onready var shootParticles = $enemy_for_shooter/Armature/Skeleton3D/BoneAttachment3D/EnemyGun/GPUParticles3D
 
 
 
@@ -47,7 +47,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func damage(dmg):
+func enemy_damage(dmg):
 	health -= dmg
 	
 	if health <= 0:
