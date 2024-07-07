@@ -84,7 +84,7 @@ func _physics_process(delta):
 	#slide_speed = slide_speed * 2
 	
 	if Input.is_action_just_pressed("E"):
-		Engine.time_scale = 0.6
+		Engine.time_scale = 0.5
 	
 	if Input.is_action_just_released("E"):
 		Engine.time_scale = 1
@@ -92,7 +92,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("slide") and SPEED > 3:
 		can_slide = true
-		slide()
+		slide(delta)
 		
 	if Input.is_action_just_released("slide"):
 		slide_sound.stop()
@@ -126,6 +126,9 @@ func _physics_process(delta):
 		shoot_state()
 	
 	# Handle jump.
+	
+	#acceleration
+	
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions
@@ -237,7 +240,7 @@ func _on_stamina_timer_timeout():
 	if stamina < 100:
 		stamina += 1
 		
-func slide():
+func slide(delta):
 	slide_speed = 1
 	
 	slide_sound.play()
@@ -249,12 +252,7 @@ func slide():
 	if sliding == true and can_slide == true:
 		can_slide = false
 		
-		
-		
-		if SPEED <= 7.0:
-			slide_speed = 7
-		elif SPEED > 7.0:
-			slide_speed = 9
+		slide_speed = get_real_velocity().length()
 		
 		print(get_floor_angle())
 		print("slide_speed: " + str(slide_speed))
@@ -278,9 +276,9 @@ func slide():
 		scale.y = 0.5
 		
 		if get_real_velocity().y > 0:
-			slide_speed -= 0.5
+			slide_speed -= 0.6
 		else: 
-			slide_speed -= 0.3
+			slide_speed -= 0.4
 		
 		if get_floor_angle() >= 0.2 and sliding and get_real_velocity().y < 0:
 			slide_speed += get_floor_angle() * 3
