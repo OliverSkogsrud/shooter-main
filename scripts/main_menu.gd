@@ -49,3 +49,8 @@ func _on_h_slider_value_changed(value):
 		ProjectSettings.set_setting("Rendering/Anti Aliasing/Quality/MSAA 3D", 4)
 		ProjectSettings.save()
 		
+
+
+func _on_back_pressed():
+	main_ui.visible = true
+	options.visible = false
