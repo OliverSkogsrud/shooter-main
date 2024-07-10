@@ -10,7 +10,7 @@ config_version=5
 
 [Rendering]
 
-"Anti Aliasing/Quality/MSAA 3D"=4
+"Anti Aliasing/Quality/MSAA 3D"=1
 
 [application]
 

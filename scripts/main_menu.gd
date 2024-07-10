@@ -17,7 +17,7 @@ func _on_play_pressed():
 	
 
 func _ready():
-	pass
+	anti_aliasing_text.text = "Anti-Aliasing: 8x"
 
 func _on_options_pressed():
 	main_ui.visible = false

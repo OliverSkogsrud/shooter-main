@@ -106,7 +106,6 @@ material = SubResource("StandardMaterial3D_spyu5")
 transform = Transform3D(0.747705, 0, 0.664031, 0, 1, 0, -0.664031, 0, 0.747705, 4.97277, 2.02883, 10.7731)
 
 [node name="mainUi" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="mainUi"]
 layout_mode = 3
@@ -145,6 +144,7 @@ theme_override_font_sizes/font_size = 40
 text = "Exit"
 
 [node name="Options" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="Options"]
 layout_mode = 3
