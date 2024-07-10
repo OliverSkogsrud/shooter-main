@@ -1,6 +1,5 @@
 extends Node3D
 
-@onready var play : Button = $mainUi/Control/VBoxContainer/play
 @onready var options_button : Button = $mainUi/Control/VBoxContainer/options
 @onready var exit : Button = $mainUi/Control/VBoxContainer/exit
 
@@ -10,11 +9,9 @@ extends Node3D
 
 @onready var anti_aliasing_text : Label = $Options/Control/VBoxContainer/Anti_aliasing_text
 
-var anti_aliasing_value = 100
+@onready var levels = $Levels
 
-func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Scenes/world.tscn")
-	
+var anti_aliasing_value = 100
 
 func _ready():
 	anti_aliasing_text.text = "Anti-Aliasing: 8x"
@@ -54,3 +51,9 @@ func _on_h_slider_value_changed(value):
 func _on_back_pressed():
 	main_ui.visible = true
 	options.visible = false
+
+
+func _on_levels_pressed():
+	main_ui.visible = false
+	levels.visible = true
+	
