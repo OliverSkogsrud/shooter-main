@@ -14,6 +14,7 @@ var bullet = load("res://Scenes/enemy_bullet.tscn")
 
 
 var blood_splash_pre = load("res://Scenes/blood_splash.tscn")
+var splat_stain_pre = load("res://Scenes/splat_stain.tscn")
 
 var loop = true
 
@@ -54,7 +55,13 @@ func enemy_damage(dmg):
 		var blood_splash = blood_splash_pre.instantiate()
 		blood_splash.global_position = global_position
 		
+		var splat_stain = splat_stain_pre.instantiate()
+		splat_stain.global_position = global_position
+		
 		get_parent().add_child(blood_splash)
+		get_parent().add_child(splat_stain)
+		
+		splat_stain.get_node("Timer").start()
 		
 		blood_splash.emitting = true
 		

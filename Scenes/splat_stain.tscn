@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr6vmcggeg0sg"]
+
+[ext_resource type="Texture2D" uid="uid://ulcxgdqag1sq" path="res://textures/splat_stain.png" id="1_5nvpi"]
+[ext_resource type="Script" path="res://scripts/splat_stain.gd" id="1_d7o40"]
+
+[node name="Splat_stain" type="Node3D"]
+script = ExtResource("1_d7o40")
+
+[node name="Decal" type="Decal" parent="."]
+texture_albedo = ExtResource("1_5nvpi")
+emission_energy = 16.0
+modulate = Color(1, 0.0901961, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
