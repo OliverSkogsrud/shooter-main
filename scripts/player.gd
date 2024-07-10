@@ -245,6 +245,9 @@ func slide(delta):
 	
 	slide_sound.play()
 	
+	var slide_fov_tween = get_tree().create_tween()
+	slide_fov_tween.tween_property(camera, "fov", 110, 0.5)
+	
 	var look_dir = -neck.transform.basis.z
 	if can_slide:
 		SPEED = 0
