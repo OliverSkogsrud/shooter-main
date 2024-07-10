@@ -8,6 +8,10 @@
 
 config_version=5
 
+[Rendering]
+
+"Anti Aliasing/Quality/MSAA 3D"=4
+
 [application]
 
 config/name="shooter_game_fix"
