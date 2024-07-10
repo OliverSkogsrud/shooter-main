@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://8oe1minno1mi"]
+[gd_scene load_steps=10 format=3 uid="uid://8oe1minno1mi"]
 
 [ext_resource type="Texture2D" uid="uid://cun8ecab7w2e1" path="res://textures/kenney_prototypeTextures/PNG/Dark/texture_01.png" id="1_h0r3r"]
 [ext_resource type="PackedScene" uid="uid://dkvla0u7boqgm" path="res://Scenes/light.tscn" id="2_rr1mm"]
+[ext_resource type="Texture2D" uid="uid://blnwmre3gxj5r" path="res://textures/kenney_prototypeTextures/PNG/Orange/texture_01.png" id="3_6kwpf"]
+[ext_resource type="PackedScene" uid="uid://nq66g28ff5c3" path="res://Scenes/dummy.tscn" id="4_olu7l"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_76o0g"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -13,20 +15,27 @@ sky_material = SubResource("ProceduralSkyMaterial_76o0g")
 [sub_resource type="Environment" id="Environment_af16a"]
 background_mode = 2
 sky = SubResource("Sky_42f6e")
-tonemap_mode = 2
+tonemap_mode = 3
 glow_enabled = true
 glow_levels/1 = 1.0
 glow_levels/2 = 1.0
 glow_levels/4 = 1.0
 glow_levels/6 = 1.0
 glow_levels/7 = 1.0
+glow_strength = 1.1
+glow_blend_mode = 4
 glow_hdr_threshold = 0.0
+fog_light_energy = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.0
+volumetric_fog_density = 0.0085
+volumetric_fog_albedo = Color(0.2, 1, 1, 1)
 volumetric_fog_emission_energy = 0.45
 volumetric_fog_detail_spread = 2.07053
 adjustment_enabled = true
 adjustment_saturation = 0.9
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vfa2f"]
+albedo_texture = ExtResource("3_6kwpf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spyu5"]
 albedo_texture = ExtResource("1_h0r3r")
@@ -40,14 +49,47 @@ environment = SubResource("Environment_af16a")
 transform = Transform3D(0.654556, -0.724919, 0.214589, -0.330583, -0.0191774, 0.943582, -0.679906, -0.688567, -0.252198, -0.830198, 0.105556, 3.85749)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(10.2, 0, 0, 0, 10.2, 0, 0, 0, 10.2, -0.0999999, 5, 4.1)
-flip_faces = true
-size = Vector3(2, 1, 2)
-material = SubResource("StandardMaterial3D_spyu5")
-
 [node name="Light" parent="." instance=ExtResource("2_rr1mm")]
 transform = Transform3D(0, 1, 3.77017e-08, 2.21194e-08, -3.77017e-08, 1, 1, 0, -2.21194e-08, -10.329, 7.55835, 6.73114)
 
 [node name="Light2" parent="." instance=ExtResource("2_rr1mm")]
 transform = Transform3D(-1, -4.37114e-08, 2.21194e-08, 2.21194e-08, -3.77017e-08, 1, -4.37114e-08, 1, 3.77017e-08, 8.10379, 7.55835, -6.08308)
+
+[node name="Dummy" parent="." instance=ExtResource("4_olu7l")]
+transform = Transform3D(-0.625597, 0, -0.780147, 0, 1, 0, 0.780147, 0, -0.625597, -4.25728, 5.03188, 0.303863)
+
+[node name="Boxes" type="Node" parent="."]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Boxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.09807, 1.98609, -0.770305)
+size = Vector3(3.7276, 4.21008, 4.56403)
+material = SubResource("StandardMaterial3D_vfa2f")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Boxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.99567, 0.0689309, -1.20233)
+size = Vector3(2.18204, 0.547913, 2.70096)
+material = SubResource("StandardMaterial3D_vfa2f")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Boxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.29901, 0.751716, -0.829718)
+size = Vector3(2.35909, 1.91348, 3.44618)
+material = SubResource("StandardMaterial3D_vfa2f")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Boxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65424, 1.17044, 4.98524)
+size = Vector3(2.35909, 2.90205, 3.44618)
+material = SubResource("StandardMaterial3D_vfa2f")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Boxes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1505, -0.130765, 10.9276)
+size = Vector3(2.35909, 0.531105, 3.44618)
+material = SubResource("StandardMaterial3D_vfa2f")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Boxes"]
+transform = Transform3D(10.2, 0, 0, 0, 10.2, 0, 0, 0, 10.2, -0.0999999, 5, 4.1)
+flip_faces = true
+size = Vector3(2, 1, 2)
+material = SubResource("StandardMaterial3D_spyu5")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.747705, 0, 0.664031, 0, 1, 0, -0.664031, 0, 0.747705, 4.97277, 2.02883, 10.7731)
