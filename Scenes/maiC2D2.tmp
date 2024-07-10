@@ -172,7 +172,6 @@ label_settings = SubResource("LabelSettings_rrd53")
 [node name="HSlider" type="HSlider" parent="Options/Control/VBoxContainer"]
 layout_mode = 2
 step = 25.0
-value = 100.0
 tick_count = 4
 ticks_on_borders = true
 
