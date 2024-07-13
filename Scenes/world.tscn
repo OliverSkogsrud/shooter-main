@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://crj60x4lao40r"]
+[gd_scene load_steps=20 format=3 uid="uid://crj60x4lao40r"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_iaofp"]
 [ext_resource type="PackedScene" uid="uid://cfwig4lfftnqn" path="res://Scenes/player.tscn" id="1_kn8p0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dffeqgxo26bav" path="res://Scenes/med_kit.tscn" id="7_4hbgn"]
 [ext_resource type="Texture2D" uid="uid://yxs4r52318f1" path="res://textures/kenney_prototypeTextures/PNG/Dark/texture_13.png" id="8_mr78y"]
 [ext_resource type="PackedScene" uid="uid://dnx8uc3we0md7" path="res://Scenes/portal.tscn" id="10_htbsn"]
+[ext_resource type="PackedScene" uid="uid://drvun3yxty2mi" path="res://Scenes/blackcube.tscn" id="11_5puho"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ky8we"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -395,6 +396,12 @@ transform = Transform3D(9.63551e-16, -0.504297, -2.20435e-08, -2.20435e-08, -2.2
 [node name="Light20" parent="Lights" instance=ExtResource("6_ng285")]
 transform = Transform3D(9.63551e-16, -0.504297, -2.20435e-08, -2.20435e-08, -2.20435e-08, 0.504297, -0.504297, 1.06789e-22, -2.20435e-08, -6.32618, 2.011, -28.4153)
 
+[node name="Light36" parent="Lights" instance=ExtResource("6_ng285")]
+transform = Transform3D(9.63551e-16, -0.504297, -2.20435e-08, -2.20435e-08, -2.20435e-08, 0.504297, -0.504297, 1.06789e-22, -2.20435e-08, -6.32618, 2.011, -35.4153)
+
+[node name="Light37" parent="Lights" instance=ExtResource("6_ng285")]
+transform = Transform3D(4.4087e-08, 0.504297, 2.20435e-08, -2.20435e-08, -2.20435e-08, 0.504297, 0.504297, -4.4087e-08, 2.20435e-08, -1.32618, 2.011, -37.4153)
+
 [node name="Light2" parent="Lights" instance=ExtResource("6_ng285")]
 transform = Transform3D(9.63553e-16, 0.504297, -2.20435e-08, 2.20435e-08, -2.20435e-08, -0.504297, -0.504297, 0, -2.20435e-08, -9.93959, 1.32735, 20.2895)
 
@@ -550,3 +557,15 @@ shape = SubResource("BoxShape3D_0v1ar")
 
 [node name="Portal" parent="." instance=ExtResource("10_htbsn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.52078, 2.99155, 92.4398)
+
+[node name="blackCube" parent="." instance=ExtResource("11_5puho")]
+transform = Transform3D(0.5, 0, 0, 0, 4.84978, 0, 0, 0, 6.88115, -1.0346, 1.8206, -37.0089)
+
+[node name="blackCube2" parent="." instance=ExtResource("11_5puho")]
+transform = Transform3D(0.5, 0, 0, 0, 4.84978, 0, 0, 0, 6.88115, -6.70704, 1.8206, -37.0089)
+
+[node name="blackCube3" parent="." instance=ExtResource("11_5puho")]
+transform = Transform3D(-2.18557e-08, 0, -6.88115, 0, 4.84978, 0, 0.5, 0, -3.00785e-07, -3.47917, 1.8206, -40.0089)
+
+[node name="blackCube4" parent="." instance=ExtResource("11_5puho")]
+transform = Transform3D(-2.18557e-08, 0, -6.88115, -0.5, -4.4518e-07, 3.00785e-07, -2.18557e-08, 10.1845, -1.1299e-14, -3.47917, 3.8206, -37.0089)
