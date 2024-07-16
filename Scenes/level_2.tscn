@@ -1,3 +1,157 @@
-[gd_scene format=3 uid="uid://c7s60tx4k8nxy"]
+[gd_scene load_steps=8 format=3 uid="uid://c7s60tx4k8nxy"]
+
+[ext_resource type="PackedScene" uid="uid://drvun3yxty2mi" path="res://Scenes/blackcube.tscn" id="1_gedqe"]
+[ext_resource type="Texture2D" uid="uid://7t4gfebmogia" path="res://HDRs/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="2_k8giu"]
+[ext_resource type="PackedScene" uid="uid://dkvla0u7boqgm" path="res://Scenes/light.tscn" id="3_psjv7"]
+[ext_resource type="PackedScene" uid="uid://cfwig4lfftnqn" path="res://Scenes/player.tscn" id="4_ibd55"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3l575"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_curve = 0.00937501
+sky_cover = ExtResource("2_k8giu")
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_p2ftj"]
+sky_material = SubResource("ProceduralSkyMaterial_3l575")
+
+[sub_resource type="Environment" id="Environment_cfj37"]
+background_mode = 2
+sky = SubResource("Sky_p2ftj")
+reflected_light_source = 2
+tonemap_mode = 3
+tonemap_exposure = 1.92
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+ssil_intensity = 6.59
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_y_scale = 0
+sdfgi_energy = 0.5
+sdfgi_normal_bias = 0.625
+sdfgi_probe_bias = -0.885
+glow_enabled = true
+glow_levels/1 = 1.0
+glow_levels/2 = 1.0
+glow_levels/4 = 1.0
+glow_levels/6 = 1.0
+glow_levels/7 = 1.0
+glow_normalized = true
+glow_intensity = 0.3
+glow_bloom = 0.5
+glow_blend_mode = 0
+glow_hdr_threshold = 2.0
+fog_light_color = Color(0.669576, 0.677597, 0.712527, 1)
+fog_light_energy = 0.2
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.012
+volumetric_fog_albedo = Color(0.162066, 0.162066, 0.162066, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_length = 14.45
+adjustment_enabled = true
+adjustment_brightness = 0.5
+adjustment_saturation = 1.15
 
 [node name="Level2" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cfj37")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="BlackCubes" type="Node" parent="."]
+
+[node name="blackCube" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(5.40087, 0, 0, 0, 0.1774, 0, 0, 0, 5.53123, 0, 0, 0)
+
+[node name="blackCube3" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(19.2828, 0, 0, 0, 0.1774, 0, 0, 0, 18.0668, 0, -4.04211, -26.4974)
+
+[node name="blackCube15" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(33.016, 0, 0, 0, 0.1774, 0, 0, 0, 31.2789, 42.6678, 5.58324, -26.5068)
+
+[node name="blackCube19" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, 0.1774, 0, 0, 0, 8.5559, 73.1774, 5.58324, -26.5068)
+
+[node name="blackCube20" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, -7.7544e-09, -8.5559, 0, 0.1774, -3.7399e-07, 73.1774, 9.37185, -30.8109)
+
+[node name="blackCube23" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-5.92923e-07, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 13.5645, -4.00805e-08, 1.34091e-14, 73.1774, 11.7575, -25.4689)
+
+[node name="blackCube21" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, -7.7544e-09, -8.5559, 0, 0.1774, -3.7399e-07, 73.1774, 9.37185, -22.427)
+
+[node name="blackCube22" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, 0.1774, 0, 0, 0, 8.5559, 73.1774, 13.5266, -26.639)
+
+[node name="blackCube16" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(33.016, 0, 0, 0, -7.7544e-09, -13.8448, 0, 0.1774, -6.05175e-07, 42.6678, 8.72143, -11.802)
+
+[node name="blackCube17" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(33.016, 0, 0, 0, -7.7544e-09, -13.8448, 0, 0.1774, -6.05175e-07, 42.6678, 8.72143, -41.9995)
+
+[node name="blackCube18" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-1.44317e-06, 0.1774, -6.05175e-07, 0, -7.7544e-09, -13.8448, -33.016, -7.7544e-09, 7.56396e-14, 26.4018, 8.72143, -49.5409)
+
+[node name="blackCube4" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, 2.69074, -1.50578, -5.33021)
+
+[node name="blackCube5" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, -2.70409, -1.50578, -5.33021)
+
+[node name="blackCube8" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, -9.91612, -1.50578, -29.667)
+
+[node name="blackCube9" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, -24.5919, 19.2828, -7.7544e-09, 0, -8.42879e-07, -0.1774, -1.07495e-06, -1.05359, -1.50578, -35.5653)
+
+[node name="blackCube12" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(8.42879e-07, 0.1774, 2.1499e-06, 19.2828, -7.7544e-09, 5.20754e-21, 7.36868e-14, 1.55088e-08, -24.5919, 9.67182, -1.50578, -39.4587)
+
+[node name="blackCube13" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(1.19091e-06, 27.8276, 7.26925e-07, 27.2448, -1.21638e-06, 1.76078e-21, 1.04113e-13, 2.43277e-06, -8.31505, 23.5447, 2.68553, -15.6634)
+
+[node name="blackCube14" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(1.17771e-06, 18.3328, 7.26925e-07, 26.9428, -8.01351e-07, 1.76078e-21, 1.02958e-13, 1.6027e-06, -8.31505, 18.4487, 2.68553, -31.344)
+
+[node name="blackCube10" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, -7.29845, 19.2828, -7.7544e-09, 0, -8.42879e-07, -0.1774, -3.19026e-07, 5.38928, -2.50578, -18.4446)
+
+[node name="blackCube11" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(16.6994, -0.0887, 9.81559e-22, 9.64141, 0.153633, 5.66703e-22, -6.85063e-14, 0, 7.29845, 17.9073, 0.756609, -23.419)
+
+[node name="blackCube6" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, 6.76467, 19.2828, -7.7544e-09, 0, 8.42879e-07, 0.1774, -2.95693e-07, 0.370271, -1.00871, 2.51086)
+
+[node name="blackCube7" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, 7.46387, 19.2828, -7.7544e-09, 0, 8.42879e-07, 0.1774, -3.26256e-07, -6.43941, -1.00871, -17.464)
+
+[node name="blackCube2" parent="BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(5.40087, 0, 0, 0, 0.0867417, 4.08842, 0, -0.0236875, 14.9714, 0, -2.00642, -10.227)
+
+[node name="Lights" type="Node" parent="."]
+
+[node name="Light" parent="Lights" instance=ExtResource("3_psjv7")]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 68.2771, 8.53768, -30.5997)
+
+[node name="Light2" parent="Lights" instance=ExtResource("3_psjv7")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 64, 8.53768, -22.6236)
+
+[node name="Light3" parent="Lights" instance=ExtResource("3_psjv7")]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 75.0475, 6.42806, -30.5997)
+
+[node name="Light4" parent="Lights" instance=ExtResource("3_psjv7")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 70.7705, 6.42806, -22.6236)
+
+[node name="Light5" parent="Lights" instance=ExtResource("3_psjv7")]
+transform = Transform3D(-1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 84.7149, 8.71766, -30.5919)
+
+[node name="Light6" parent="Lights" instance=ExtResource("3_psjv7")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 80.4378, 8.71766, -22.6158)
+
+[node name="Player" parent="." instance=ExtResource("4_ibd55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51986, 1.31351, -0.669664)

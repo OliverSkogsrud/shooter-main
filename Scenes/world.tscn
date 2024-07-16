@@ -18,12 +18,12 @@ sky_curve = 0.00937501
 sky_cover = ExtResource("2_gmry0")
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_p2ftj"]
+[sub_resource type="Sky" id="Sky_3y1ib"]
 sky_material = SubResource("ProceduralSkyMaterial_ky8we")
 
 [sub_resource type="Environment" id="Environment_mhql0"]
 background_mode = 2
-sky = SubResource("Sky_p2ftj")
+sky = SubResource("Sky_3y1ib")
 reflected_light_source = 2
 tonemap_mode = 3
 tonemap_exposure = 1.92
