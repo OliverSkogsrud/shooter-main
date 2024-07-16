@@ -8,7 +8,7 @@ const JUMP_VELOCITY = 4.5
 
 var isSeeingPlayer = false
 
-@onready var animTree = $AnimationTree
+@onready var animTree : AnimationTree = $AnimationTree
 
 func animate():
 	if isSeeingPlayer == true:
