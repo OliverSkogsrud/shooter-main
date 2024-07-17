@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://v0nitl5f8oxy"]
+[gd_scene load_steps=24 format=3 uid="uid://v0nitl5f8oxy"]
 
 [ext_resource type="Script" path="res://scripts/SpiderEnemy.gd" id="1_oagr4"]
 [ext_resource type="PackedScene" uid="uid://b4s1yohod16ar" path="res://Scenes/enemy_base_stats.tscn" id="2_xbt3f"]
@@ -658,6 +658,9 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_rx2fq"]
 size = Vector3(2, 1.69482, 4.47079)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_rj2om"]
+size = Vector3(1.84277, 1.125, 4.54578)
+
 [node name="SpiderEnemy" type="CharacterBody3D" groups=["Enemy"]]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_oagr4")
@@ -866,3 +869,11 @@ shape = SubResource("BoxShape3D_rx2fq")
 
 [node name="EnemyBaseStats" parent="." instance=ExtResource("2_xbt3f")]
 health = 40
+
+[node name="SpiderHitbox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpiderHitbox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0066321, 0.243225, 1.59287)
+shape = SubResource("BoxShape3D_rj2om")
+
+[connection signal="body_entered" from="SpiderHitbox" to="." method="_on_spider_hitbox_body_entered"]

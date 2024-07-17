@@ -2,6 +2,8 @@ extends Node
 
 @export var health = 20
 
+@export var damage = 30
+
 var blood_splash_pre = load("res://Scenes/blood_splash.tscn")
 
 var splat_stain_pre = load("res://Scenes/splat_stain.tscn")

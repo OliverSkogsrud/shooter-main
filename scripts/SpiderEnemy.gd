@@ -9,6 +9,7 @@ const JUMP_VELOCITY = 4.5
 var isSeeingPlayer = false
 @onready var nav_agent = $NavigationAgent3D
 @onready var animation_player = $goofyAhhMonster/AnimationPlayer
+@onready var enemy_base_stats = $EnemyBaseStats
 
 func navigate(target_location):
 	nav_agent.set_target_position(target_location)
@@ -50,3 +51,10 @@ func _process(delta):
 	await get_tree().create_timer(0.4).timeout
 	
 
+
+
+func _on_spider_hitbox_body_entered(body):
+	if body.has_method("damage"):
+		body.damage(enemy_base_stats.damage)
+		enemy_base_stats.health = 0
+		enemy_base_stats.enemy_damage(0)
