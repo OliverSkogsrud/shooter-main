@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7s60tx4k8nxy"]
+[gd_scene load_steps=10 format=3 uid="uid://c7s60tx4k8nxy"]
 
 [ext_resource type="PackedScene" uid="uid://drvun3yxty2mi" path="res://Scenes/blackcube.tscn" id="1_gedqe"]
 [ext_resource type="Texture2D" uid="uid://7t4gfebmogia" path="res://HDRs/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="2_k8giu"]
@@ -54,6 +54,10 @@ adjustment_enabled = true
 adjustment_brightness = 0.5
 adjustment_saturation = 1.15
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_actvf"]
+vertices = PackedVector3Array(27.1505, 6.10282, -41.2989, 27.1505, 6.10282, -36.0489, 28.1505, 6.10282, -35.7989, 28.1505, 6.10282, -26.7989, 25.9005, 6.10282, -26.5489, 25.9005, 6.10282, -20.5489, 37.9005, 6.10282, -20.5489, 58.4005, 6.10282, -22.7989, 60.6505, 6.10282, -23.0489, 60.6505, 6.10282, -30.0489, 58.4005, 6.10282, -30.2989, 37.9005, 6.10282, -20.5489, 27.1505, 6.10282, -41.2989, 28.1505, 6.10282, -35.7989, 37.9005, 6.10282, -20.5489, 58.4005, 6.10282, -30.2989, 58.4005, 6.10282, -41.2989, 37.9005, 6.10282, -20.5489, 38.1505, 6.10282, -12.5489, 58.4005, 6.10282, -12.5489, 58.4005, 6.10282, -22.7989, 28.1505, 6.10282, -35.7989, 28.1505, 6.10282, -26.7989, 37.9005, 6.10282, -20.5489, 9.65046, 16.6028, -35.0489, 9.65046, 16.6028, -27.5489, 27.1505, 16.6028, -27.5489, 27.1505, 16.6028, -35.0489, -2.09954, -3.14718, -16.0489, 1.90046, -3.14718, -16.0489, 2.15046, -3.64718, -18.2989, -2.34954, -3.64718, -18.2989, 2.15046, -3.64718, -18.2989, 8.90046, -3.64718, -20.2989, 8.65046, -3.64718, -26.7989, -2.34954, -3.64718, -18.2989, 8.90046, -3.64718, -20.2989, 11.1505, -2.39718, -20.5489, 11.1505, -2.39718, -26.5489, 8.65046, -3.64718, -26.7989, -9.09954, -3.64718, -34.7989, -9.09954, -3.64718, -18.2989, -2.34954, -3.64718, -18.2989, 8.65046, -3.64718, -26.7989, 8.65046, -3.64718, -34.7989, 2.15046, -3.64718, -18.2989, 8.90046, -3.64718, -18.2989, 8.90046, -3.64718, -20.2989, 60.6505, 10.3528, -30.5489, 60.6505, 10.3528, -22.7989, 72.1505, 10.3528, -22.7989, 72.1505, 10.3528, -30.5489, 74.1505, 10.3528, -30.5489, 74.1505, 10.3528, -22.7989, 86.9005, 10.3528, -22.7989, 86.9005, 10.3528, -30.5489, 60.6505, 6.10282, -23.0489, 72.1505, 6.10282, -23.0489, 72.1505, 6.10282, -30.0489, 60.6505, 6.10282, -30.0489, 74.1505, 6.10282, -30.0489, 74.1505, 6.10282, -23.0489, 86.9005, 6.10282, -23.0489, 86.9005, 6.10282, -30.0489, 11.1505, -2.39718, -20.5489, 25.9005, 6.10282, -20.5489, 25.9005, 6.10282, -26.5489, 11.1505, -2.39718, -26.5489, 9.90046, 16.6028, -19.5489, 9.90046, 16.6028, -11.7989, 37.1505, 16.6028, -11.7989, 37.1505, 16.6028, -19.5489, 26.6505, 6.10282, -19.2989, 26.6505, 6.10282, -12.5489, 36.9005, 6.10282, -12.5489, 36.9005, 6.10282, -19.2989, 1.90046, -3.14718, -16.0489, -2.09954, -3.14718, -16.0489, -2.09954, 0.352819, 1.7011, 1.90046, 0.352819, 1.7011, 1.90046, 0.102819, -4.21557, -2.09954, 0.102819, -4.21557)
+polygons = [PackedInt32Array(0, 2, 1), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 11), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(23, 22, 21), PackedInt32Array(27, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(28, 31, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(32, 35, 33), PackedInt32Array(33, 35, 34), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39), PackedInt32Array(42, 41, 43), PackedInt32Array(43, 41, 44), PackedInt32Array(44, 41, 40), PackedInt32Array(47, 46, 45), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(55, 54, 52), PackedInt32Array(52, 54, 53), PackedInt32Array(59, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(63, 62, 60), PackedInt32Array(60, 62, 61), PackedInt32Array(67, 66, 64), PackedInt32Array(64, 66, 65), PackedInt32Array(71, 70, 68), PackedInt32Array(68, 70, 69), PackedInt32Array(75, 74, 72), PackedInt32Array(72, 74, 73), PackedInt32Array(79, 78, 80), PackedInt32Array(80, 78, 81), PackedInt32Array(80, 81, 77), PackedInt32Array(80, 77, 76)]
+
 [node name="Level2" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -62,86 +66,6 @@ environment = SubResource("Environment_cfj37")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
-
-[node name="BlackCubes" type="Node" parent="."]
-
-[node name="blackCube" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(5.40087, 0, 0, 0, 0.1774, 0, 0, 0, 5.53123, 0, 0, 0)
-
-[node name="blackCube3" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(19.2828, 0, 0, 0, 0.1774, 0, 0, 0, 18.0668, 0, -4.04211, -26.4974)
-
-[node name="blackCube15" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(33.016, 0, 0, 0, 0.1774, 0, 0, 0, 31.2789, 42.6678, 5.58324, -26.5068)
-
-[node name="blackCube19" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(28.2909, 0, 0, 0, 0.1774, 0, 0, 0, 8.5559, 73.1774, 5.58324, -26.5068)
-
-[node name="blackCube20" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(28.2909, 0, 0, 0, -7.7544e-09, -5.07725, 0, 0.1774, -2.21934e-07, 73.1774, 7.32496, -30.8109)
-
-[node name="blackCube23" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-5.92923e-07, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 13.5645, -4.00805e-08, 1.34091e-14, 73.1774, 10.4654, -25.4689)
-
-[node name="blackCube24" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-1.53075e-06, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 35.0195, -4.00805e-08, 1.34091e-14, 59.52, 13.436, -25.4689)
-
-[node name="blackCube25" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-6.64188e-07, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 15.1949, -4.00805e-08, 1.34091e-14, 59.52, 8.6843, -38.37)
-
-[node name="blackCube26" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-6.64188e-07, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 15.1949, -4.00805e-08, 1.34091e-14, 59.52, 8.6843, -14.9113)
-
-[node name="blackCube21" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(28.2909, 0, 0, 0, -7.7544e-09, -5.07725, 0, 0.1774, -2.21934e-07, 73.1774, 7.32496, -22.427)
-
-[node name="blackCube22" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(28.2909, 0, 0, 0, 0.1774, 0, 0, 0, 8.5559, 73.1774, 9.90684, -26.639)
-
-[node name="blackCube16" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(33.016, 0, 0, 0, -7.7544e-09, -13.8448, 0, 0.1774, -6.05175e-07, 42.6678, 8.72143, -11.802)
-
-[node name="blackCube17" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(33.016, 0, 0, 0, -7.7544e-09, -13.8448, 0, 0.1774, -6.05175e-07, 42.6678, 8.72143, -41.9995)
-
-[node name="blackCube18" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-1.44317e-06, 0.1774, -6.05175e-07, 0, -7.7544e-09, -13.8448, -33.016, -7.7544e-09, 7.56396e-14, 26.4018, 8.72143, -49.5409)
-
-[node name="blackCube4" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, 2.69074, -1.50578, -5.33021)
-
-[node name="blackCube5" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, -2.70409, -1.50578, -5.33021)
-
-[node name="blackCube8" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, -9.91612, -1.50578, -29.667)
-
-[node name="blackCube9" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(3.68434e-14, 7.7544e-09, -24.5919, 19.2828, -7.7544e-09, 0, -8.42879e-07, -0.1774, -1.07495e-06, -1.05359, -1.50578, -35.5653)
-
-[node name="blackCube12" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(8.42879e-07, 0.1774, 2.1499e-06, 19.2828, -7.7544e-09, 5.20754e-21, 7.36868e-14, 1.55088e-08, -24.5919, 9.67182, -1.50578, -39.4587)
-
-[node name="blackCube13" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(1.19091e-06, 27.8276, 7.26925e-07, 27.2448, -1.21638e-06, 1.76078e-21, 1.04113e-13, 2.43277e-06, -8.31505, 23.5447, 2.68553, -15.6634)
-
-[node name="blackCube14" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(1.17771e-06, 18.3328, 7.26925e-07, 26.9428, -8.01351e-07, 1.76078e-21, 1.02958e-13, 1.6027e-06, -8.31505, 18.4487, 2.68553, -31.344)
-
-[node name="blackCube10" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(3.68434e-14, 7.7544e-09, -7.29845, 19.2828, -7.7544e-09, 0, -8.42879e-07, -0.1774, -3.19026e-07, 6.30525, -2.50578, -17.5498)
-
-[node name="blackCube11" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(20.715, -0.0763858, 9.81559e-22, 11.9598, 0.132304, 5.66703e-22, -8.49794e-14, 0, 7.29845, 15.8241, -0.365658, -23.4423)
-
-[node name="blackCube6" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(3.68434e-14, 7.7544e-09, 6.76467, 19.2828, -7.7544e-09, 0, 8.42879e-07, 0.1774, -2.95693e-07, 0.370271, -1.00871, 2.51086)
-
-[node name="blackCube7" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(3.68434e-14, 7.7544e-09, 7.46387, 19.2828, -7.7544e-09, 0, 8.42879e-07, 0.1774, -3.26256e-07, -6.43941, -1.00871, -17.464)
-
-[node name="blackCube2" parent="BlackCubes" instance=ExtResource("1_gedqe")]
-transform = Transform3D(5.40087, 0, 0, 0, 0.0867417, 4.08842, 0, -0.0236875, 14.9714, 0, -2.00642, -10.227)
 
 [node name="Lights" type="Node" parent="."]
 
@@ -180,3 +104,86 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51986, 1.31351, -0.669664)
 
 [node name="SpiderEnemy" parent="." instance=ExtResource("5_gjuut")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, -2.83284, -28.4947)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_actvf")
+
+[node name="BlackCubes" type="Node" parent="NavigationRegion3D"]
+
+[node name="blackCube" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(5.40087, 0, 0, 0, 0.1774, 0, 0, 0, 5.53123, 0, 0, 0)
+
+[node name="blackCube3" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(19.2828, 0, 0, 0, 0.1774, 0, 0, 0, 18.0668, 0, -4.04211, -26.4974)
+
+[node name="blackCube15" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(33.016, 0, 0, 0, 0.1774, 0, 0, 0, 31.2789, 42.6678, 5.58324, -26.5068)
+
+[node name="blackCube19" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, 0.1774, 0, 0, 0, 8.5559, 73.1774, 5.58324, -26.5068)
+
+[node name="blackCube20" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, -7.7544e-09, -5.07725, 0, 0.1774, -2.21934e-07, 73.1774, 7.32496, -30.8109)
+
+[node name="blackCube23" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-5.92923e-07, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 13.5645, -4.00805e-08, 1.34091e-14, 73.1774, 10.4654, -25.4689)
+
+[node name="blackCube24" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-1.53075e-06, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 35.0195, -4.00805e-08, 1.34091e-14, 59.52, 13.436, -25.4689)
+
+[node name="blackCube25" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-6.64188e-07, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 15.1949, -4.00805e-08, 1.34091e-14, 59.52, 8.6843, -38.37)
+
+[node name="blackCube26" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-6.64188e-07, -0.916936, 3.06765e-07, 0, -4.00806e-08, -7.01796, 15.1949, -4.00805e-08, 1.34091e-14, 59.52, 8.6843, -14.9113)
+
+[node name="blackCube21" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, -7.7544e-09, -5.07725, 0, 0.1774, -2.21934e-07, 73.1774, 7.32496, -22.427)
+
+[node name="blackCube22" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(28.2909, 0, 0, 0, 0.1774, 0, 0, 0, 8.5559, 73.1774, 9.90684, -26.639)
+
+[node name="blackCube16" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(33.016, 0, 0, 0, -7.7544e-09, -13.8448, 0, 0.1774, -6.05175e-07, 42.6678, 8.72143, -11.802)
+
+[node name="blackCube17" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(33.016, 0, 0, 0, -7.7544e-09, -13.8448, 0, 0.1774, -6.05175e-07, 42.6678, 8.72143, -41.9995)
+
+[node name="blackCube18" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-1.44317e-06, 0.1774, -6.05175e-07, 0, -7.7544e-09, -13.8448, -33.016, -7.7544e-09, 7.56396e-14, 26.4018, 8.72143, -49.5409)
+
+[node name="blackCube4" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, 2.69074, -1.50578, -5.33021)
+
+[node name="blackCube5" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, -2.70409, -1.50578, -5.33021)
+
+[node name="blackCube8" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(-8.42879e-07, -0.1774, 0, 19.2828, -7.7544e-09, 0, 0, 0, 24.5919, -9.91612, -1.50578, -29.667)
+
+[node name="blackCube9" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, -24.5919, 19.2828, -7.7544e-09, 0, -8.42879e-07, -0.1774, -1.07495e-06, -1.05359, -1.50578, -35.5653)
+
+[node name="blackCube12" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(8.42879e-07, 0.1774, 2.1499e-06, 19.2828, -7.7544e-09, 5.20754e-21, 7.36868e-14, 1.55088e-08, -24.5919, 9.67182, -1.50578, -39.4587)
+
+[node name="blackCube13" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(1.19091e-06, 27.8276, 7.26925e-07, 27.2448, -1.21638e-06, 1.76078e-21, 1.04113e-13, 2.43277e-06, -8.31505, 23.5447, 2.68553, -15.6634)
+
+[node name="blackCube14" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(1.17771e-06, 18.3328, 7.26925e-07, 26.9428, -8.01351e-07, 1.76078e-21, 1.02958e-13, 1.6027e-06, -8.31505, 18.4487, 2.68553, -31.344)
+
+[node name="blackCube10" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, -7.29845, 19.2828, -7.7544e-09, 0, -8.42879e-07, -0.1774, -3.19026e-07, 6.30525, -2.50578, -17.5498)
+
+[node name="blackCube11" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(20.715, -0.0763858, 9.81559e-22, 11.9598, 0.132304, 5.66703e-22, -8.49794e-14, 0, 7.29845, 15.8241, -0.365658, -23.4423)
+
+[node name="blackCube6" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, 6.76467, 19.2828, -7.7544e-09, 0, 8.42879e-07, 0.1774, -2.95693e-07, 0.370271, -1.00871, 2.51086)
+
+[node name="blackCube7" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(3.68434e-14, 7.7544e-09, 7.46387, 19.2828, -7.7544e-09, 0, 8.42879e-07, 0.1774, -3.26256e-07, -6.43941, -1.00871, -17.464)
+
+[node name="blackCube2" parent="NavigationRegion3D/BlackCubes" instance=ExtResource("1_gedqe")]
+transform = Transform3D(5.40087, 0, 0, 0, 0.0867417, 4.08842, 0, -0.0236875, 14.9714, 0, -2.00642, -10.227)
