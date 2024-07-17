@@ -7,8 +7,13 @@ const JUMP_VELOCITY = 4.5
 @onready var ray = $goofyAhhMonster/Armature/Skeleton3D/BoneAttachment3D/RayCast3D
 
 var isSeeingPlayer = false
-
+@onready var nav_agent = $NavigationAgent3D
 @onready var animation_player = $goofyAhhMonster/AnimationPlayer
+
+func navigate(target_location):
+	nav_agent.set_target_location(target_location)
+	
+
 
 func animate():
 	if isSeeingPlayer == true:
@@ -19,9 +24,12 @@ func animate():
 func _physics_process(delta):
 	animate()
 	
+	var current_location = global_transform.origin
+	
+	
 	var look_dir = -transform.basis.z
 	if isSeeingPlayer:
-		position += SPEED * look_dir
+		velocity = SPEED * look_dir
 	
 	if not is_on_floor():
 		velocity.y -= 1.5
@@ -31,6 +39,8 @@ func _physics_process(delta):
 		if collider.has_method("damage"):
 			isSeeingPlayer = true
 	else : isSeeingPlayer = false
+	
+	move_and_slide()
 	
 func _process(delta):
 	look_at(get_parent().get_node("Player").global_position)

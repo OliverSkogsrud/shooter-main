@@ -861,3 +861,5 @@ libraries = {
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214727, -0.082823, 1.73179)
 shape = SubResource("BoxShape3D_rx2fq")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
