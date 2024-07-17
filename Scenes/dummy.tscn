@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://nq66g28ff5c3"]
 
 [ext_resource type="Script" path="res://scripts/dummy.gd" id="1_n3ihw"]
-[ext_resource type="AudioStream" uid="uid://vu2y2bsny36m" path="res://Sounds/splat.mp3" id="2_0u4ph"]
+[ext_resource type="PackedScene" uid="uid://b4s1yohod16ar" path="res://Scenes/enemy_base_stats.tscn" id="3_hoo83"]
 [ext_resource type="PackedScene" uid="uid://3ibbo42hmaoj" path="res://Scenes/enemy_gun.tscn" id="3_k20xd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pawpr"]
@@ -355,10 +355,6 @@ mesh = SubResource("CapsuleMesh_vf2r2")
 transform = Transform3D(0.718243, 0, 0, 0, 0.718243, 0, 0, 0, 0.718243, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_ub1pt")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("2_0u4ph")
-max_distance = 100.0
-
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0155348, 0.494224, -0.510787)
 target_position = Vector3(0, 0, -20)
@@ -619,3 +615,5 @@ libraries = {
 "": SubResource("AnimationLibrary_7wo5f")
 }
 autoplay = "Armature|mixamo_com|Layer0"
+
+[node name="EnemyBaseStats" parent="." instance=ExtResource("3_hoo83")]

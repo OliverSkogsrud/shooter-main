@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 
-const SPEED = 0.05
+const SPEED = 4.0
 const JUMP_VELOCITY = 4.5
 
 @onready var ray = $goofyAhhMonster/Armature/Skeleton3D/BoneAttachment3D/RayCast3D
@@ -11,7 +11,7 @@ var isSeeingPlayer = false
 @onready var animation_player = $goofyAhhMonster/AnimationPlayer
 
 func navigate(target_location):
-	nav_agent.set_target_location(target_location)
+	nav_agent.set_target_position(target_location)
 	
 
 
@@ -25,11 +25,14 @@ func _physics_process(delta):
 	animate()
 	
 	var current_location = global_transform.origin
+	var next_location = nav_agent.get_next_path_position()
+	var new_velocity = (next_location - current_location).normalized() * SPEED
+	
+	if isSeeingPlayer:
+		velocity = velocity.move_toward(new_velocity, 0.25) #* delta
 	
 	
 	var look_dir = -transform.basis.z
-	if isSeeingPlayer:
-		velocity = SPEED * look_dir
 	
 	if not is_on_floor():
 		velocity.y -= 1.5
@@ -45,3 +48,5 @@ func _physics_process(delta):
 func _process(delta):
 	look_at(get_parent().get_node("Player").global_position)
 	await get_tree().create_timer(0.4).timeout
+	
+

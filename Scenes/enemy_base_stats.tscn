@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4s1yohod16ar"]
+
+[ext_resource type="Script" path="res://scripts/enemy_base_stats.gd" id="1_rcwqa"]
+[ext_resource type="AudioStream" uid="uid://vu2y2bsny36m" path="res://Sounds/splat.mp3" id="2_x6hc5"]
+
+[node name="EnemyBaseStats" type="Node"]
+script = ExtResource("1_rcwqa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_x6hc5")
+max_distance = 100.0

@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://v0nitl5f8oxy"]
+[gd_scene load_steps=23 format=3 uid="uid://v0nitl5f8oxy"]
 
 [ext_resource type="Script" path="res://scripts/SpiderEnemy.gd" id="1_oagr4"]
+[ext_resource type="PackedScene" uid="uid://b4s1yohod16ar" path="res://Scenes/enemy_base_stats.tscn" id="2_xbt3f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yk4hq"]
 resource_name = "Material"
@@ -657,9 +658,8 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_rx2fq"]
 size = Vector3(2, 1.69482, 4.47079)
 
-[node name="SpiderEnemy" type="CharacterBody3D"]
+[node name="SpiderEnemy" type="CharacterBody3D" groups=["Enemy"]]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-collision_layer = 2
 script = ExtResource("1_oagr4")
 
 [node name="goofyAhhMonster" type="Node3D" parent="."]
@@ -863,3 +863,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0214727, -0.082823, 1.7317
 shape = SubResource("BoxShape3D_rx2fq")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="EnemyBaseStats" parent="." instance=ExtResource("2_xbt3f")]
+health = 40

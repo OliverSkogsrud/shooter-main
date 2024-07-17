@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7s60tx4k8nxy"]
+[gd_scene load_steps=11 format=3 uid="uid://c7s60tx4k8nxy"]
 
+[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_1tlxg"]
 [ext_resource type="PackedScene" uid="uid://drvun3yxty2mi" path="res://Scenes/blackcube.tscn" id="1_gedqe"]
 [ext_resource type="Texture2D" uid="uid://7t4gfebmogia" path="res://HDRs/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="2_k8giu"]
 [ext_resource type="PackedScene" uid="uid://dkvla0u7boqgm" path="res://Scenes/light.tscn" id="3_psjv7"]
@@ -59,6 +60,7 @@ vertices = PackedVector3Array(27.1505, 6.10282, -41.2989, 27.1505, 6.10282, -36.
 polygons = [PackedInt32Array(0, 2, 1), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 7, 11), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(23, 22, 21), PackedInt32Array(27, 26, 24), PackedInt32Array(24, 26, 25), PackedInt32Array(28, 31, 29), PackedInt32Array(29, 31, 30), PackedInt32Array(32, 35, 33), PackedInt32Array(33, 35, 34), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39), PackedInt32Array(42, 41, 43), PackedInt32Array(43, 41, 44), PackedInt32Array(44, 41, 40), PackedInt32Array(47, 46, 45), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(55, 54, 52), PackedInt32Array(52, 54, 53), PackedInt32Array(59, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(63, 62, 60), PackedInt32Array(60, 62, 61), PackedInt32Array(67, 66, 64), PackedInt32Array(64, 66, 65), PackedInt32Array(71, 70, 68), PackedInt32Array(68, 70, 69), PackedInt32Array(75, 74, 72), PackedInt32Array(72, 74, 73), PackedInt32Array(79, 78, 80), PackedInt32Array(80, 78, 81), PackedInt32Array(80, 81, 77), PackedInt32Array(80, 77, 76)]
 
 [node name="Level2" type="Node3D"]
+script = ExtResource("1_1tlxg")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_cfj37")
