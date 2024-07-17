@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7s60tx4k8nxy"]
+[gd_scene load_steps=9 format=3 uid="uid://c7s60tx4k8nxy"]
 
 [ext_resource type="PackedScene" uid="uid://drvun3yxty2mi" path="res://Scenes/blackcube.tscn" id="1_gedqe"]
 [ext_resource type="Texture2D" uid="uid://7t4gfebmogia" path="res://HDRs/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="2_k8giu"]
 [ext_resource type="PackedScene" uid="uid://dkvla0u7boqgm" path="res://Scenes/light.tscn" id="3_psjv7"]
 [ext_resource type="PackedScene" uid="uid://cfwig4lfftnqn" path="res://Scenes/player.tscn" id="4_ibd55"]
+[ext_resource type="PackedScene" uid="uid://v0nitl5f8oxy" path="res://Scenes/SpiderEnemy.tscn" id="5_gjuut"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3l575"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -176,3 +177,6 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 80.437
 
 [node name="Player" parent="." instance=ExtResource("4_ibd55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.51986, 1.31351, -0.669664)
+
+[node name="SpiderEnemy" parent="." instance=ExtResource("5_gjuut")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2, -2.83284, -28.4947)
