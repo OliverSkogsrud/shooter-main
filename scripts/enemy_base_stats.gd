@@ -31,6 +31,8 @@ func enemy_damage(dmg):
 		
 		await get_tree().create_timer(0.3).timeout
 		
+		get_parent().queue_free()
+		
 		get_parent().visible = false
 		
 		await get_tree().create_timer(0.8).timeout
