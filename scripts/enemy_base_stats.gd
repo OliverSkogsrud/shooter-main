@@ -35,5 +35,4 @@ func enemy_damage(dmg):
 		
 		await get_tree().create_timer(0.8).timeout
 		
-		get_parent().queue_free()
 		get_parent().get_parent().remove_child(get_parent())
